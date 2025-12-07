@@ -69,7 +69,6 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#skills"><i class="bi bi-code-slash navicon"></i> Skills</a></li>
         <li><a href="#resume-ai"><i class="bi bi-file-earmark-text navicon"></i> <span>Resume</span></a></li>
@@ -122,24 +121,11 @@
                 }
               </script>
 
-              <div class="swiper-wrapper align-items-center">
-
+              <div class="swiper-wrapper align-items-center" id="swiper-wrapper">
+                <!-- Data will be injected here -->
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/app-1.jpg" alt="">
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -148,21 +134,12 @@
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <ul id="project-info-list">
+                <!-- Data will be injected here -->
               </ul>
             </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia.
-                Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia
-                accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt
-                eius.
-              </p>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300" id="project-description">
+              <!-- Data will be injected here -->
             </div>
           </div>
 
@@ -211,6 +188,48 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Project Data Loader -->
+  <script src="assets/js/project-data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('id');
+
+      if (projectId && typeof getProjectData === 'function') {
+        const data = getProjectData(projectId);
+
+        if (data) {
+          // 1. Update Images
+          const swiperWrapper = document.getElementById('swiper-wrapper');
+          if (swiperWrapper && data.images) {
+            swiperWrapper.innerHTML = data.images.map(imgSrc => `
+              <div class="swiper-slide">
+                <img src="${imgSrc}" alt="">
+              </div>
+            `).join('');
+          }
+
+          // 2. Update Info List
+          const infoList = document.getElementById('project-info-list');
+          if (infoList) {
+            infoList.innerHTML = `
+              <li><strong>Category</strong>: ${data.category}</li>
+              <li><strong>Client</strong>: ${data.client}</li>
+              <li><strong>Project date</strong>: ${data.projectDate || ''}</li>
+              <li><strong>Technologies</strong>: ${data.technologies}</li>
+            `;
+          }
+
+          // 3. Update Description
+          const descContainer = document.getElementById('project-description');
+          if (descContainer) {
+            descContainer.innerHTML = data.description;
+          }
+        }
+      }
+    });
+  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
