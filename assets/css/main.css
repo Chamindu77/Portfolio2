@@ -1489,95 +1489,170 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Certifications Section
+# Achievements & Certifications Section
 --------------------------------------------------------------*/
-.certifications .cert-item {
-  background: var(--surface-color);
-  padding: 30px;
-  border-radius: 15px;
-  height: 100%;
-  transition: all 0.3s ease;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
-  display: flex;
-  flex-direction: column;
+.certifications .subsection-title {
+  margin-bottom: 30px;
   position: relative;
-  overflow: hidden;
+  padding-bottom: 10px;
 }
 
-.certifications .cert-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-color: var(--accent-color);
-}
-
-.certifications .cert-icon {
-  width: 50px;
-  height: 50px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 12px;
+.certifications .subsection-title h3 {
+  font-size: 24px;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
+  gap: 15px;
+  color: var(--heading-color);
 }
 
-.certifications .cert-icon i {
-  font-size: 24px;
+.certifications .subsection-title h3 i {
   color: var(--accent-color);
 }
 
-.certifications .cert-item:hover .cert-icon {
-  background: var(--accent-color);
+/* Achievement Card Styles */
+.achievement-card {
+  background: var(--surface-color);
+  border-radius: 15px;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.certifications .cert-item:hover .cert-icon i {
-  color: var(--contrast-color);
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
 }
 
-.certifications .cert-item h3 {
-  font-size: 18px;
+.achievement-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.achievement-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.achievement-card:hover .achievement-img img {
+  transform: scale(1.1);
+}
+
+.achievement-content {
+  padding: 20px;
+}
+
+.achievement-content h3 {
+  font-size: 19px;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--heading-color);
 }
 
-.certifications .org {
+.achievement-content p {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Enhanced Cert Item Styles */
+.cert-item {
+  background: var(--surface-color);
+  border-radius: 15px;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cert-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+}
+
+.cert-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.cert-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 15px;
+  transition: 0.5s;
+}
+
+.cert-item:hover .cert-img img {
+  transform: scale(1.05);
+}
+
+.cert-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.cert-info .org {
   font-size: 15px;
   color: var(--accent-color);
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-.certifications .cert-details {
+.cert-info .cert-details {
   margin-top: auto;
   font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
-.certifications .cert-details i {
-  font-size: 14px;
+.cert-info .cert-details i {
   color: var(--accent-color);
 }
 
-.certifications .cert-link {
+.cert-link {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 600;
   color: var(--accent-color);
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-}
-
-.certifications .cert-link i {
-  font-size: 12px;
+  gap: 8px;
   transition: 0.3s;
 }
 
-.certifications .cert-link:hover i {
-  transform: translateX(3px);
+.cert-link:hover {
+  color: color-mix(in srgb, var(--accent-color), black 20%);
+}
+
+.cert-link i {
+  font-size: 14px;
 }
