@@ -7,7 +7,15 @@ const projects = {
     projectUrl: "#", // Placeholder
     technologies: "React, TS, FastAPI, Node.js, Spring Boot, LangChain, LangGraph, LLMs, MySQL, MongoDB, ChromaDB",
     images: [
-      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1758338777/Screenshot_31_qis7ke.png"
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766068905/5281de18-e411-4b66-92c2-ef8284195739.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069009/409a86c7-fafb-4db1-9c7d-effcaa1cf9c8.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069102/48fc21b3-098d-4428-9d7c-fe49471f0691.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069140/3bc79fd0-7a19-45be-ad06-0fcb4602d224.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069246/4b11afa9-f511-4b97-a335-f92e152fbed7.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069636/75588ce2-7909-462c-817b-ce22c870491a.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069815/1570853b-6b1d-4d02-8648-2831f8c55e4d.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766069959/665938f4-a0b4-48c2-bd4d-58567575f911.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766067248/27c1b7f1-89ab-40e8-9ece-0e94fffc2a61.png"
     ],
     description: `
       <h2>Agentic AI-Powered Workflow Automation System</h2>
@@ -36,7 +44,12 @@ const projects = {
     projectUrl: "#",
     technologies: "Python, Streamlit, FastAPI, Pandas, NumPy, LangChain, LLMs, Docker",
     images: [
-      "assets/img/portfolio/product-1.jpg"
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766075289/c4d70704-d31a-481e-8b7a-c559fa7f5613.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766075345/ed38ba96-43ff-4336-83de-bcb08616f5b0.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766075673/5696ce67-bc3a-4762-813a-baaf450c5990.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766075420/c41fc73e-8d64-4b36-9206-dc591482fcba.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766075861/d9acc623-ecb3-4cda-a706-18e19ed1fe4e.png"
+
     ],
     description: `
       <h2>PrometheusAI — Data Engine</h2>
@@ -94,7 +107,8 @@ const projects = {
     projectUrl: "#",
     technologies: "Node.js, Express, React.js, TypeScript, MySQL, Kafka, Docker, SendGrid, Stripe",
     images: [
-      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1758339592/c202d79f-d4a5-4f8e-b53d-a6fabaffbbae.png"
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766076426/d9b3e90c-7906-4b00-9f6d-ec249717e469.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766076447/d9964314-fd29-4367-99e7-956a28fe629e.png"
     ],
     description: `
       <h2>Colombo Bookfair Reservation Management System</h2>
@@ -120,7 +134,8 @@ const projects = {
     projectUrl: "#",
     technologies: "Tableau",
     images: [
-      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1758819292/639c5aa0-6d96-4bff-9c24-b86ab48dd66e.png"
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1758819292/639c5aa0-6d96-4bff-9c24-b86ab48dd66e.png",
+      "https://res.cloudinary.com/dsnzmaddw/image/upload/v1766076712/f53de599-6741-4447-9e81-5b146dc0132f.png"
     ],
     description: `
       <h2>Sales & Customer Performance Dashboards</h2>
